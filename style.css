@@ -151,7 +151,7 @@ html, body {
 }
 
 .post:last-child {
-  border-bottom: none;
+  border-bottom: true;
 }
 
 .post h2 {
