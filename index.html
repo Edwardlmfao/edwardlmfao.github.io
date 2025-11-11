@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edward — Personal Site</title>
+  <meta name="description" content="Edward's website or yes">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="edward.png">
+</head>
+<body>
+  <header class="top-nav">
+    <nav>
+      <a href="?tab=feed" class="nav-item" data-tab="feed">Feed</a>
+      <a href="?tab=code" class="nav-item" data-tab="code">Code</a>
+      <a href="?tab=memory" class="nav-item" data-tab="memory">Memory</a>
+      <a href="?tab=resume" class="nav-item" data-tab="resume">Resume</a>
+      <a href="?tab=social" class="nav-item" data-tab="social">Social</a>
+      <a href="?tab=writeups" class="nav-item" data-tab="writeups">Writeups</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <img src="avatar.png" alt="Edward avatar" class="avatar">
+      <h1>Edward</h1>
+      <p class="handle">@kepinforreal</p>
+      <p class="bio">That one paper from FPE.</p>
+      <p class="info">📍 IDN<br>🕒 Local time: <span id="local-time"></span></p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div id="feed" class="tab">
+        <article class="post">
+          <h2>💻 Midnight Coding</h2>
+          <p class="date">November 9, 2025</p>
+          <p>There’s a special peace in writing code when the world is asleep.</p>
+        </article>
+      </div>
+
+             <article class="post">
+          <h2>💻 Midnight Coding</h2>
+          <p class="date">November 9, 2025</p>
+          <p>There’s a special peace in writing code when the world is asleep.</p>
+        </article>
+      </div>
+      
+      <!-- CODE -->
+      <div id="code" class="tab hidden">
+        <h2>Projects</h2>
+        <ul>
+          <li><a href="https://github.com/edward/project-one">Project One</a> — A minimal static site generator.</li>
+          <li><a href="https://github.com/edward/utils">Utils</a> — Tiny JavaScript helpers for everyday tasks.</li>
+        </ul>
+      </div>
+
+      <!-- MEMORY -->
+      <div id="memory" class="tab hidden">
+        <h2>Memory</h2>
+        <p>A space for photos, thoughts, and reflections.</p>
+        <div class="gallery">
+          <img src="photo1.jpg" alt="">
+          <img src="photo2.jpg" alt="">
+          <img src="photo3.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- RESUME -->
+      <div id="resume" class="tab hidden">
+        <h2>Resume</h2>
+        <p>Software Engineer passionate about web, design, and simplicity.</p>
+        <ul>
+          <li>🌱 Frontend Developer — Freelance</li>
+          <li>🧩 Contributor — Open Source Projects</li>
+        </ul>
+      </div>  
+
+      <!-- SOCIAL -->
+      <div id="social" class="tab hidden">
+        <h2>Social Links</h2>
+        <ul>
+          <li><a href="https://github.com/edward">GitHub</a></li>
+          <li><a href="https://twitter.com/edward">Twitter</a></li>
+          <li><a href="https://anilist.co/user/edward">AniList</a></li>
+        </ul>
+      </div>
+
+      <!-- WRITEUPS tab (CTF) -->
+      <div id="writeups" class="tab hidden">
+        <header style="display:flex;gap:8px;align-items:center;justify-content:space-between;margin-bottom:12px;">
+          <div style="min-width:0;">
+            <h2 style="margin:0 0 4px 0;font-size:1.05rem;">CTF Writeups</h2>
+            <small style="color:var(--text-soft);font-size:0.85rem">edward's list of writeups</small>
+          </div>
+
+          <div style="display:flex;gap:8px;align-items:center">
+            <input id="search-w" type="search" placeholder="Search writeups" style="padding:8px;border-radius:8px;border:1px solid var(--border)">
+            <select id="filterTag-w" style="padding:8px;border-radius:8px;border:1px solid var(--border)">
+              <option value="">All tags</option>
+            </select>
+            <select id="sortBy-w" style="padding:8px;border-radius:8px;border:1px solid var(--border)">
+              <option value="date">Newest</option>
+              <option value="difficulty">Difficulty</option>
+            </select>
+          </div>
+        </header>
+
+        <div id="writeups-list" style="display:block"></div>
+        <div style="margin-top:12px;color:var(--text-soft);font-size:0.9rem">· writeups because yes</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
