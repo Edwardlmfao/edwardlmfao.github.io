@@ -1,4 +1,3 @@
-// --- Tab switching based on ?tab= parameter ---
 const params = new URLSearchParams(window.location.search);
 let activeTab = params.get("tab") || "feed";
 
@@ -9,7 +8,7 @@ function showTab(tabName) {
     activeElement.classList.remove("hidden");
   }
 
-  // Update active nav style
+
   document.querySelectorAll(".nav-item").forEach(link => {
     if (link.dataset.tab === tabName) {
       link.classList.add("active");
@@ -21,10 +20,10 @@ function showTab(tabName) {
 
 showTab(activeTab);
 
-// --- Update tab on navigation ---
+
 document.querySelectorAll(".nav-item").forEach(link => {
   link.addEventListener("click", (e) => {
-    e.preventDefault(); // avoid full page reload
+    e.preventDefault(); 
     const tabName = link.dataset.tab;
     history.pushState({ tab: tabName }, "", `?tab=${tabName}`);
     showTab(tabName);
@@ -36,7 +35,7 @@ window.addEventListener("popstate", (e) => {
   showTab(tab);
 });
 
-// --- Local time updater with formatting ---
+
 function updateTime() {
   const now = new Date();
   const timeString = now.toLocaleTimeString("en-US", {
@@ -53,11 +52,11 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 1000);
 
-// --- Add seasonal greeting ---
+
 function getSeasonalGreeting() {
   const month = new Date().getMonth();
   const greetings = {
-    autumn: "🍂 Welcome to autumn's golden hour...",
+    autumn: "⛄ Welcome to autumn's golden hour...",
     default: "Welcome..."
   };
   
@@ -66,21 +65,11 @@ function getSeasonalGreeting() {
 
 console.log(getSeasonalGreeting());
 
-// === Encrypted "likes" feature using Web Crypto API ===
-
-/*
-  Behavior:
-  - Adds a "Like" button to each .post element.
-  - Liked post IDs are stored encrypted in localStorage under key 'encrypted_likes'.
-  - A symmetric AES-GCM key is generated per browser session (stored raw in sessionStorage).
-  - This prevents plaintext like data in localStorage; key is ephemeral per session.
-  - Note: client-side encryption only deters casual inspection; not a substitute for server-side auth.
-*/
 
 const STORAGE_KEY = "encrypted_likes";
 const SESSION_KEY_KEY = "session_aes_key_raw_b64";
 
-// --- helpers ---
+
 function arrayBufferToBase64(buffer) {
   const bytes = new Uint8Array(buffer);
   let binary = "";
@@ -99,7 +88,7 @@ function base64ToArrayBuffer(base64) {
   return bytes.buffer;
 }
 
-// get or create a session AES-GCM key
+
 async function getSessionKey() {
   try {
     const rawB64 = sessionStorage.getItem(SESSION_KEY_KEY);
@@ -195,7 +184,7 @@ async function loadLikes() {
         btn.style.marginTop = "12px";
         btn.style.cursor = "pointer";
         btn.setAttribute("aria-pressed", "false");
-        btn.textContent = "🍂 Like";
+        btn.textContent = "⛄ Like";
         post.appendChild(btn);
       }
 
@@ -203,7 +192,7 @@ async function loadLikes() {
       const updateBtn = () => {
         const pressed = likedIds.has(id);
         btn.setAttribute("aria-pressed", pressed ? "true" : "false");
-        btn.textContent = pressed ? "🍁 Liked" : "🍂 Like";
+        btn.textContent = pressed ? "⛄ Liked" : "⛄ Like";
         btn.style.fontWeight = pressed ? "700" : "600";
         btn.style.color = pressed ? "var(--link)" : "var(--accent)";
       };
