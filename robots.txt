@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /
+
+User-Agent: Googlebot
+User-Agent: Bingbot
+User-Agent: Yahoo! Slurp
+User-Agent: DuckDuckBot
+User-Agent: YandexBot
+User-Agent: Baiduspider
+User-Agent: Sogou Spider
+User-Agent: Exabot
+User-Agent: Facebot
+User-Agent: Twitterbot
+User-Agent: WhatsApp
+Disallow: /40*
+Disallow: /50*
+Disallow: /*/
+Sitemap: https://edwardlmfao.github.io/sitemap.xml
