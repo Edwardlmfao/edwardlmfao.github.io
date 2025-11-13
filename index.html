@@ -17,8 +17,10 @@
       <a href="?tab=biodata" class="nav-item" data-tab="biodata">Biodata</a>
       <a href="?tab=social" class="nav-item" data-tab="social">Social</a>
       <a href="?tab=writeups" class="nav-item" data-tab="writeups">Writeups</a>
+      <a href="?tab=achievement" class="nav-item" data-tab="achievement">Achievement</a>
     </nav>
   </header>
+
   <main class="layout">
     <aside class="sidebar">
       <img src="edward.png" alt="Edward avatar" class="avatar">
@@ -26,18 +28,18 @@
       <p class="handle">@kepinforreal</p>
       <p class="bio">That one paper from FPE.</p>
       <p class="info">📍 IDN<br>🕒 Local time: <span id="local-time"></span></p>
-      </div>
     </aside>
 
     <section class="content">
+
+      <!-- FEED -->
       <div id="feed" class="tab">
         <article class="post">
           <h2>⛄ Winter.</h2>
-          <!-- <p class="date">November 9, 2025</p> -->
           <p>christmas without you.</p>
         </article>
       </div>
-      
+
       <!-- CODE -->
       <div id="code" class="tab hidden">
         <h2>Projects</h2>
@@ -48,16 +50,16 @@
 
       <!-- SHITPOST -->
       <div id="shitpost" class="tab hidden">
-      <h2>Shitposts</h2>
+        <h2>Shitposts</h2>
         <p>AAAAAAAAAALOT OF EDWARRRRRRRRRRRRRRRRRRRRRRDSSSSSSSSSSSSSSSSSSSSSSSSSSSS</p>
-        <div class="gallery">
+        <div class="shitpost">
           <img src="edward.png" alt="">
           <img src="edward.png" alt="">
           <img src="edward.png" alt="">
         </div>
       </div>
 
-      <!-- BIO -->
+      <!-- BIODATA -->
       <div id="biodata" class="tab hidden">
         <h2>Biodata</h2>
         <p>...</p>
@@ -72,15 +74,14 @@
         </ul>
       </div>
 
-      <!-- WRITEUPS tab (CTF) -->
+      <!-- WRITEUPS -->
       <div id="writeups" class="tab hidden">
         <header style="display:flex;gap:8px;align-items:center;justify-content:space-between;margin-bottom:12px;">
           <div style="min-width:0;">
             <h2 style="margin:0 0 4px 0;font-size:1.05rem;">CTF Writeups</h2>
-            <small style="color:var(--text-soft);font-size:0.85rem">edward's list of writeups</small>
+            <small style="color:var(--text-soft);font-size:0.85rem;">edward's list of writeups</small>
           </div>
-
-          <div style="display:flex;gap:8px;align-items:center">
+          <div style="display:flex;gap:8px;align-items:center;">
             <input id="search-w" type="search" placeholder="Search writeups" style="padding:8px;border-radius:8px;border:1px solid var(--border)">
             <select id="filterTag-w" style="padding:8px;border-radius:8px;border:1px solid var(--border)">
               <option value="">All tags</option>
@@ -91,10 +92,23 @@
             </select>
           </div>
         </header>
-
         <div id="writeups-list" style="display:block"></div>
-        <div style="margin-top:12px;color:var(--text-soft);font-size:0.9rem">· writeups because yes</div>
+        <div style="margin-top:12px;color:var(--text-soft);font-size:0.9rem;">· writeups because yes</div>
       </div>
+
+          <!-- ACHIEVEMENT -->
+  <div id="achievement" class="tab hidden">
+    <h2>Achievements</h2>
+    <p class="achievement-desc"><i>Mostly certificates and CTF awards.</i></p>
+
+    <div class="achievement-gallery">
+      <img src="jcc.png" alt="JCC Certificate">
+      <img src="netcomp.png" alt="NetComp Certificate">
+      <img src="cyberstrike.png" alt="Cyberstrike Certificate">
+      <img src="aractf.png" alt="AraCTF Certificate">
+    </div>
+  </div>
+
     </section>
   </main>
 
