@@ -1,3 +1,4 @@
+
 /* -----------------------------------------------------------
    Edward's Personal Website Theme — Autumn Edition
    Warm, earthy tones inspired by fall aesthetics
@@ -209,7 +210,7 @@ li {
 }
 
 li:before {
-  content: "🍂";
+  content: "⛄";
   position: absolute;
   left: 0;
 }
@@ -302,4 +303,34 @@ footer {
   .gallery img {
     width: 100%;
   }
+}
+
+/* === ACHIEVEMENTS SECTION === */
+.achievement-desc {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: flex-start;
+}
+
+.achievement-gallery img {
+  width: 180px;
+  height: auto;
+  border-radius: 14px;
+  border: 2px solid var(--border);
+  box-shadow: 0 6px 16px rgba(184, 98, 27, 0.2);
+  filter: sepia(0.25) saturate(1.1) brightness(0.97);
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.achievement-gallery img:hover {
+  transform: scale(1.05) rotate(1deg);
+  filter: sepia(0.1) saturate(1.2) brightness(1.03);
+  box-shadow: 0 10px 20px rgba(184, 98, 27, 0.3);
 }
