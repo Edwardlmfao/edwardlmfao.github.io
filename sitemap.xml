@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://edwardlmfao.github.io/</loc>
+    <lastmod>2025-11-13T00:13:05+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://edwardlmfao.github.io/?tab=feed</loc>
+    <lastmod>2025-11-13T00:13:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://edwardlmfao.github.io/?tab=code</loc>
+    <lastmod>2025-11-13T00:13:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://edwardlmfao.github.io/?tab=shitpost</loc>
+    <lastmod>2025-11-13T00:13:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://edwardlmfao.github.io/?tab=biodata</loc>
+    <lastmod>2025-11-13T00:13:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://edwardlmfao.github.io/?tab=social</loc>
+    <lastmod>2025-11-13T00:13:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://edwardlmfao.github.io/?tab=writeups</loc>
+    <lastmod>2025-11-13T00:13:05+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>
