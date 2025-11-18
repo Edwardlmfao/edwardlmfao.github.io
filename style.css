@@ -67,6 +67,35 @@ html, body {
   color: var(--link);
 }
 
+.like-btn {
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 6px;      
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  width: 130px;             
+  text-align: center;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+.like-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(160, 210, 255, 0.35);
+}
+
+.like-btn[aria-pressed="true"] {
+  border-color: var(--link);
+  color: var(--link);
+  font-weight: 700;
+}
+
 /* === MAIN LAYOUT === */
 .layout {
   display: grid;
@@ -248,32 +277,6 @@ a:hover {
   transform: scale(1.08) rotate(2deg);
   filter: brightness(1.15);
   box-shadow: 0 12px 28px rgba(156, 212, 255, 0.3);
-}
-
-/* === SHITPOST SECTION === */
-.shitpost {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.shitpost img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
-
-.shitpost img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
 }
 
 /* === FOOTER === */
